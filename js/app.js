@@ -44,3 +44,23 @@ function show(count){
       }
       
       
+let product = document.querySelector('.product')
+var a = 2
+function add(){
+  product.innerHTML += `
+  <div class="item">
+  <div class="title">Product ${a}</div>
+  <label>
+    <div class="mtitle">Enter main keyword for the product</div>
+    <input type="text" placeholder="for example, sylicon wine cup">
+  </label>
+</div>
+<div class="item">
+  <label>
+    <div class="mtitle">Enter link to the similar product as a reference</div>
+    <input type="text" placeholder="https://...">
+  </label>
+</div>
+  `
+  a++
+}

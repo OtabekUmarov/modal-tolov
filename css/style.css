@@ -71,6 +71,7 @@ button:focus {
 }
 .modal .main {
   height: 390px;
+  overflow-y: scroll;
   padding-right: 5px;
 }
 .modal .main::-webkit-scrollbar {
@@ -121,6 +122,7 @@ button:focus {
   font-size: 18px;
   font-family: 'g-sb', serif;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 .modal .add .name svg {
   margin-left: 5px;
