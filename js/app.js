@@ -1,20 +1,29 @@
-
-
 let btns = document.querySelectorAll('.btn')
 let productCount = 0
 let mainPage = document.querySelector('.modal3 .main')
-
+let circle = document.getElementById('circle')
+let val = document.querySelector('.val')
 
 
 btns.forEach(btn => {
   btn.addEventListener('click', ()=>{
     let page = btn.getAttribute('data-page')
-    console.log(page);
-    document.querySelector('.modal.active').classList.remove('active')
-    document.querySelector('.'+page).classList.add('active')
+    if(page == 'modal4') {
+      circle.classList.add('active')
+      val.style.display = 'none'
+      setTimeout(() => {
+        document.querySelector('.modal.active').classList.remove('active')
+        document.querySelector('.'+page).classList.add('active')
+        circle.classList.remove('active')
+        val.style.display = 'block'
+      }, 1500);
+    }
+    else {
+      document.querySelector('.modal.active').classList.remove('active')
+      document.querySelector('.'+page).classList.add('active')
+    }
     if (page == 'modal3') {
       productCount = document.querySelector('.modal2 input:checked').value
-      console.log(productCount);
       show(productCount)
     }
   })
